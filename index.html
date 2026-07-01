@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Ezequiel Britez - Pádel</title>
+    <meta name="description" content="Academia de Pádel Ezequiel Britez. Formación integral para todos los niveles: principiantes, avanzados, clases grupales e individuales.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logo de la academia.jpeg" alt="Academia Ezequiel Britez" class="logo-img">
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#inicio" class="nav-link" data-i18n="nav-inicio">Inicio</a>
+                <a href="#nosotros" class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+                <a href="#servicios" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+                <a href="#contacto" class="nav-link" data-i18n="nav-contacto">Contacto</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="lang-toggle" class="lang-btn">
+                    <span id="current-lang">ES</span> <i class="fa-solid fa-globe"></i>
+                </button>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#inicio" class="mobile-link" data-i18n="nav-inicio">Inicio</a>
+        <a href="#nosotros" class="mobile-link" data-i18n="nav-nosotros">Nosotros</a>
+        <a href="#servicios" class="mobile-link" data-i18n="nav-servicios">Servicios</a>
+        <a href="#contacto" class="mobile-link" data-i18n="nav-contacto">Contacto</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('assets/hero.jpg');">
+        <div class="hero-content">
+            <div class="promo-badge" data-i18n="promo-badge">¡Pretemporada de Invierno arranca el 13 de Julio!</div>
+            <h1 class="hero-title" data-i18n="hero-title">Academia de pádel de alto rendimiento<br><span class="text-red">Ezequiel Britez</span></h1>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">Formación de jugadores iniciantes - juveniles - profesionales. Clases individuales - grupos de entrenamiento - capacitación para profesores.</p>
+            <a href="#servicios" class="btn btn-primary" data-i18n="hero-btn">Descubrí la academia</a>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="about section-padding">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2 class="section-title" data-i18n="about-title">Sobre <span class="text-red">Nosotros</span></h2>
+                <h3 class="about-subtitle" data-i18n="about-subtitle">9 años formando campeones</h3>
+                <p data-i18n="about-p1">En nuestra academia de pádel, ofrecemos una formación integral para todos los niveles. Desde principiantes hasta jugadores avanzados, vos elegís: clases grupales, donde te encontrás con gente de tu nivel, o clases individuales, totalmente personalizadas.</p>
+                <p data-i18n="about-p2">Buscamos resolver la falta de información brindando una experiencia organizada y profesional. Somos una de las academias más accesibles y completas, acompañándote en cada paso de tu progreso bajo la dirección de <strong>Ezequiel Orlando Britez</strong>, fundador e instructor.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-box">
+                    <h4 class="stat-number">9+</h4>
+                    <p class="stat-label" data-i18n="stat-years">Años de Experiencia</p>
+                </div>
+                <div class="stat-box">
+                    <h4 class="stat-number">100%</h4>
+                    <p class="stat-label" data-i18n="stat-focus">Enfoque Personalizado</p>
+                </div>
+                <div class="stat-box">
+                    <h4 class="stat-number">3</h4>
+                    <p class="stat-label" data-i18n="stat-regions">Países (AR, BR, PY)</p>
+                </div>
+                <div class="stat-box">
+                    <h4 class="stat-number"><i class="fa-solid fa-trophy text-red"></i></h4>
+                    <p class="stat-label" data-i18n="stat-pro">Entorno Profesional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title text-white" data-i18n="services-title">Nuestros <span class="text-red">Entrenamientos</span></h2>
+                <p class="section-desc text-gray" data-i18n="services-subtitle">Programas adaptados a tus objetivos y nivel de juego.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('assets/service-1.jpg');"></div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv1-title">Individual Canasto</h3>
+                        <p data-i18n="srv1-desc">Clases 1 a 1 enfocadas en mejorar tu técnica específica, repetición de golpes y corrección de postura en tiempo real.</p>
+                        <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, me interesa conocer los precios y horarios de las clases de 'Individual Canasto'.">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('assets/service-2.jpg');"></div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv2-title">Grupo por Categorías</h3>
+                        <p data-i18n="srv2-desc">Entrena con jugadores de tu mismo nivel. Partidos guiados, táctica en pareja y mucha dinámica grupal.</p>
+                        <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, me interesa conocer los precios y horarios del 'Grupo de Entrenamiento por Categorías'.">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('assets/service-3.jpg');"></div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv3-title">Pretemporadas</h3>
+                        <p data-i18n="srv3-desc">Preparación física y técnica intensiva para jugadores competitivos que buscan llegar al máximo nivel para los torneos.</p>
+                        <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, quiero información sobre las 'Pretemporadas' para jugadores competitivos.">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('assets/service-4.jpg');"></div>
+                    <div class="service-content">
+                        <h3 data-i18n="srv4-title">Cursos para Profesores</h3>
+                        <p data-i18n="srv4-desc">Formación integral para futuros instructores de pádel. Metodología de enseñanza, planificación y seguimiento.</p>
+                        <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, estoy interesado en los 'Cursos para Profesores', ¿me podrías pasar información?">
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact section-padding">
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <h2 class="section-title" data-i18n="contact-title">Sube tu <span class="text-red">Nivel</span></h2>
+                <p data-i18n="contact-desc">¿Estás listo para empezar? Contáctanos directamente por WhatsApp o síguenos en nuestras redes sociales para ver el día a día de la academia.</p>
+                
+                <div class="contact-methods">
+                    <a href="https://wa.me/5493764378362" target="_blank" class="contact-method">
+                        <div class="method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="method-text">
+                            <h4>WhatsApp</h4>
+                            <p>+54 9 376 4378362</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/academiaezequielbritez?igsh=MWc5YmJ3Ym0yMmRrbg==" target="_blank" class="contact-method">
+                        <div class="method-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="method-text">
+                            <h4>Instagram</h4>
+                            <p>@academiaezequielbritez</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <div class="cta-box">
+                    <h3 data-i18n="location-title">Ubicación de la academia</h3>
+                    <p data-i18n="location-desc">Cancha Punto Padel<br>Av. Blas Parera 2633, Posadas, Misiones</p>
+                    <a href="https://maps.apple.com/place?address=Avenida%20Blas%20Parera%202633,%20N3300%20Posadas,%20Misiones,%20Argentina&coordinate=-27.377285,-55.903986&name=Punto%20Padel&place-id=I73177FD4A01FAB01&map=explore" target="_blank" class="btn btn-primary w-100 text-center">
+                        <i class="fa-solid fa-map-location-dot"></i> <span data-i18n="btn-map">Ver en el mapa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ezequiel Britez Academy. <span data-i18n="footer-rights">Todos los derechos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5493764378362?text=Hola%20Ezequiel,%20quisiera%20saber%20m%C3%A1s%20sobre%20la%20academia." class="floating-wa" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
