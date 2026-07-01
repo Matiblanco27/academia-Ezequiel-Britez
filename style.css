@@ -544,8 +544,11 @@ header:not(.scrolled) .nav-link {
 @media (max-width: 768px) {
     .nav-links { display: none; }
     .hamburger { display: block; }
-    .hero-title { font-size: 2rem; }
+    .hero-title { font-size: 1.8rem; line-height: 1.2; margin-bottom: 15px; }
+    .hero-subtitle { font-size: 0.95rem; margin-bottom: 25px; padding: 0 5px; }
+    .promo-badge { font-size: 0.75rem; padding: 6px 12px; margin-bottom: 15px; letter-spacing: 0.5px; }
+    .hero-content { margin-top: 10px; }
+    .btn { padding: 10px 20px; font-size: 0.95rem; }
     header.scrolled { padding: 10px 0; }
-    .logo-aeb { font-size: 1.8rem; }
-    .logo-text { font-size: 0.8rem; }
+    .logo-img { height: 40px; }
 }
