@@ -261,11 +261,11 @@ header:not(.scrolled) .nav-link {
     display: inline-block;
     background-color: var(--primary-red);
     color: var(--white);
-    padding: 8px 20px;
+    padding: 6px 16px;
     border-radius: 30px;
     font-weight: 800;
-    font-size: 1rem;
-    margin-bottom: 25px;
+    font-size: 0.85rem;
+    margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(217, 29, 42, 0.4);
@@ -546,7 +546,7 @@ header:not(.scrolled) .nav-link {
     .hamburger { display: block; }
     .hero-title { font-size: 1.8rem; line-height: 1.2; margin-bottom: 15px; }
     .hero-subtitle { font-size: 0.95rem; margin-bottom: 25px; padding: 0 5px; }
-    .promo-badge { font-size: 0.75rem; padding: 6px 12px; margin-bottom: 15px; letter-spacing: 0.5px; }
+    .promo-badge { font-size: 0.7rem; padding: 4px 12px; margin-bottom: 35px; letter-spacing: 0.5px; }
     .hero-content { margin-top: 10px; }
     .btn { padding: 10px 20px; font-size: 0.95rem; }
     header.scrolled { padding: 10px 0; }
