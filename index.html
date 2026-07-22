@@ -60,7 +60,11 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('assets/hero.jpg');">
+    <section id="inicio" class="hero">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="assets/hero-video.mp4?v=2" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="promo-badge" data-i18n="promo-badge">¡Pretemporada de Invierno arranca el 13 de Julio!</div>
             <h1 class="hero-title" data-i18n="hero-title">Academia de pádel de alto rendimiento<br><span class="text-red">Ezequiel Britez</span></h1>
@@ -108,56 +112,90 @@
             </div>
 
             <div class="services-grid">
-                <!-- Service 1 -->
+                <!-- Servicio 1 -->
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('assets/service-1.jpg');"></div>
+                    <div class="service-img" style="background-image: url('assets/service-1.jpeg?v=2');"></div>
                     <div class="service-content">
                         <h3 data-i18n="srv1-title">Individual Canasto</h3>
                         <p data-i18n="srv1-desc">Clases 1 a 1 enfocadas en mejorar tu técnica específica, repetición de golpes y corrección de postura en tiempo real.</p>
                         <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, me interesa conocer los precios y horarios de las clases de 'Individual Canasto'.">
-                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 2 -->
+                <!-- Servicio 2 -->
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('assets/service-2.jpg');"></div>
+                    <div class="service-img" style="background-image: url('assets/service-2.jpg?v=4');"></div>
                     <div class="service-content">
                         <h3 data-i18n="srv2-title">Grupo por Categorías</h3>
                         <p data-i18n="srv2-desc">Entrena con jugadores de tu mismo nivel. Partidos guiados, táctica en pareja y mucha dinámica grupal.</p>
                         <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, me interesa conocer los precios y horarios del 'Grupo de Entrenamiento por Categorías'.">
-                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 3 -->
+                <!-- Servicio 3 -->
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('assets/service-3.jpg');"></div>
+                    <div class="service-img" style="background-image: url('assets/service-3.png?v=2');"></div>
                     <div class="service-content">
                         <h3 data-i18n="srv3-title">Pretemporadas</h3>
                         <p data-i18n="srv3-desc">Preparación física y técnica intensiva para jugadores competitivos que buscan llegar al máximo nivel para los torneos.</p>
                         <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, quiero información sobre las 'Pretemporadas' para jugadores competitivos.">
-                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
+                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Service 4 -->
+                <!-- Servicio 4 -->
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('assets/service-4.jpg');"></div>
+                    <div class="service-img" style="background-image: url('assets/service-4.jpeg?v=2');"></div>
                     <div class="service-content">
                         <h3 data-i18n="srv4-title">Cursos para Profesores</h3>
                         <p data-i18n="srv4-desc">Formación integral para futuros instructores de pádel. Metodología de enseñanza, planificación y seguimiento.</p>
-                        <button class="btn btn-outline-red w-whatsapp" data-msg="Hola Ezequiel, estoy interesado en los 'Cursos para Profesores', ¿me podrías pasar información?">
-                            <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar Precio</span>
-                        </button>
+                        <div class="service-actions">
+                            <button class="btn btn-primary w-whatsapp" data-msg="Hola Ezequiel, estoy interesado en los 'Cursos para Profesores', ¿me podrías pasar información?">
+                                <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar</span>
+                            </button>
+                            <button class="btn btn-secondary open-modal-btn" data-target="courseModal"><i class="fa-solid fa-circle-info"></i> <span data-i18n="btn-ver-mas">Ver más</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Course Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-i18n="modal-course-title">Curso de Profesores de Pádel</h2>
+            <div class="modal-body">
+                <p data-i18n="modal-course-p1">Convertite en Profesor de Pádel con la metodología de Academia Ezequiel Britez.</p>
+                <p data-i18n="modal-course-p2">Aprendé a planificar clases, corregir la técnica de tus alumnos y desarrollar entrenamientos para jugadores de todos los niveles. Descubrí una metodología práctica, enfocada en la enseñanza, la evolución del jugador y la organización profesional de cada clase.</p>
+                
+                <h3 data-i18n="modal-course-h3">¿Qué vas a aprender?</h3>
+                <ul>
+                    <li data-i18n="modal-course-li1">🎾 Planificación y estructura de clases.</li>
+                    <li data-i18n="modal-course-li2">👨‍🏫 Técnicas de enseñanza y corrección de golpes.</li>
+                    <li data-i18n="modal-course-li3">📈 Metodologías para clases individuales, grupales y escuelitas.</li>
+                    <li data-i18n="modal-course-li4">💪 Organización de entrenamientos físicos y técnicos.</li>
+                    <li data-i18n="modal-course-li5">📜 Formación con la metodología de Academia Ezequiel Britez.</li>
+                </ul>
+                
+                <div class="modal-download">
+                    <i class="fa-solid fa-file-word"></i> <span data-i18n="modal-course-doc">CURSO ENTRENADOR DE PÁDEL - ACADEMIA EZEQUIEL BRITEZ.docx</span>
+                </div>
+
+                <p class="modal-footer-text" data-i18n="modal-course-footer">📲 Consultá por fechas, modalidad y más información.</p>
+                
+                <a href="https://wa.me/5493764378362?text=Hola%20Ezequiel,%20quisiera%20saber%20m%C3%A1s%20sobre%20el%20curso%20de%20profesores." target="_blank" class="btn btn-primary w-100 text-center" style="margin-top: 20px;">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn-consultar">Consultar</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Contacto Section -->
     <section id="contacto" class="contact section-padding">
@@ -196,7 +234,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="main-footer">
         <div class="container">
             <div class="footer-bottom">
                 <p>&copy; 2026 Ezequiel Britez Academy. <span data-i18n="footer-rights">Todos los derechos reservados.</span></p>

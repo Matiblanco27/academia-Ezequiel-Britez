@@ -74,7 +74,19 @@ const translations = {
         'srv3-desc': 'Preparación física y técnica intensiva para jugadores competitivos que buscan llegar al máximo nivel para los torneos.',
         'srv4-title': 'Cursos para Profesores',
         'srv4-desc': 'Formación integral para futuros instructores de pádel. Metodología de enseñanza, planificación y seguimiento.',
-        'btn-consultar': 'Consultar Precio',
+        'btn-consultar': 'Consultar',
+        'btn-ver-mas': 'Ver más',
+        'modal-course-title': 'Curso de Profesores de Pádel',
+        'modal-course-p1': 'Convertite en Profesor de Pádel con la metodología de Academia Ezequiel Britez.',
+        'modal-course-p2': 'Aprendé a planificar clases, corregir la técnica de tus alumnos y desarrollar entrenamientos para jugadores de todos los niveles. Descubrí una metodología práctica, enfocada en la enseñanza, la evolución del jugador y la organización profesional de cada clase.',
+        'modal-course-h3': '¿Qué vas a aprender?',
+        'modal-course-li1': '🎾 Planificación y estructura de clases.',
+        'modal-course-li2': '👨‍🏫 Técnicas de enseñanza y corrección de golpes.',
+        'modal-course-li3': '📈 Metodologías para clases individuales, grupales y escuelitas.',
+        'modal-course-li4': '💪 Organización de entrenamientos físicos y técnicos.',
+        'modal-course-li5': '📜 Formación con la metodología de Academia Ezequiel Britez.',
+        'modal-course-doc': 'CURSO ENTRENADOR DE PÁDEL - ACADEMIA EZEQUIEL BRITEZ.docx',
+        'modal-course-footer': '📲 Consultá por fechas, modalidad y más información.',
         'contact-title': 'Sube tu <span class="text-red">Nivel</span>',
         'contact-desc': '¿Estás listo para empezar? Contáctanos directamente por WhatsApp o síguenos en nuestras redes sociales para ver el día a día de la academia.',
         'location-title': 'Ubicación de la academia',
@@ -109,7 +121,19 @@ const translations = {
         'srv3-desc': 'Preparação física e técnica intensiva para jogadores competitivos que buscam atingir o nível máximo para torneios.',
         'srv4-title': 'Cursos para Professores',
         'srv4-desc': 'Treinamento integral para futuros instrutores de padel. Metodologia de ensino, planejamento e acompanhamento.',
-        'btn-consultar': 'Consultar Preço',
+        'btn-consultar': 'Consultar',
+        'btn-ver-mas': 'Ver mais',
+        'modal-course-title': 'Curso de Professores de Padel',
+        'modal-course-p1': 'Torne-se Professor de Padel com a metodologia da Academia Ezequiel Britez.',
+        'modal-course-p2': 'Aprenda a planejar aulas, corrigir a técnica de seus alunos e desenvolver treinamentos para jogadores de todos os níveis. Descubra uma metodologia prática, focada no ensino, na evolução do jogador e na organização profissional de cada aula.',
+        'modal-course-h3': 'O que você vai aprender?',
+        'modal-course-li1': '🎾 Planejamento e estrutura de aulas.',
+        'modal-course-li2': '👨‍🏫 Técnicas de ensino e correção de golpes.',
+        'modal-course-li3': '📈 Metodologias para aulas individuais, em grupo e escolinhas.',
+        'modal-course-li4': '💪 Organização de treinamentos físicos e técnicos.',
+        'modal-course-li5': '📜 Formação com a metodologia da Academia Ezequiel Britez.',
+        'modal-course-doc': 'CURSO TREINADOR DE PADEL - ACADEMIA EZEQUIEL BRITEZ.docx',
+        'modal-course-footer': '📲 Consulte datas, modalidade e mais informações.',
         'contact-title': 'Eleve seu <span class="text-red">Nível</span>',
         'contact-desc': 'Pronto para começar? Contate-nos diretamente pelo WhatsApp ou siga-nos em nossas redes sociais para ver o dia a dia da academia.',
         'location-title': 'Localização da academia',
@@ -134,4 +158,34 @@ langToggleBtn.addEventListener('click', () => {
             el.innerHTML = translations[currentLang][key];
         }
     });
+});
+
+// Modal Logic
+const openModalBtns = document.querySelectorAll('.open-modal-btn');
+const modals = document.querySelectorAll('.modal');
+const closeBtns = document.querySelectorAll('.close-modal');
+
+openModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const modal = document.getElementById(targetId);
+        if (modal) {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    });
+});
+
+closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('.modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
 });
