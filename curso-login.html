@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Alumnos - Ezequiel Britez Academy</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: var(--dark-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: var(--white);
+        }
+        
+        .login-container {
+            background-color: var(--light-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            color: var(--dark-bg);
+        }
+
+        .login-container .logo-img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .login-container p {
+            color: var(--gray-text);
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .password-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .password-form input {
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+        }
+
+        .password-form input:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .error-message {
+            color: var(--primary-red);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: none;
+            font-weight: 600;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--gray-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-red);
+        }
+
+        /* Hidden Content */
+        #secret-content {
+            display: none;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            color: var(--dark-bg);
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #e2e6ea;
+            transform: translateY(-2px);
+        }
+
+        .download-btn i.fa-file-pdf { color: #e2574c; }
+        .download-btn i.fa-file-word { color: #2b579a; }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="assets/logo de la academia.jpeg" alt="Academia Ezequiel Britez" class="logo-img">
+        
+        <div id="login-form">
+            <h2>Acceso Alumnos</h2>
+            <p>Ingresa la contraseña para descargar el material del Curso de Profesores.</p>
+            
+            <form class="password-form" onsubmit="checkPassword(event)">
+                <input type="password" id="passwordInput" placeholder="Contraseña..." required>
+                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                <div id="errorMessage" class="error-message">Contraseña incorrecta. Intenta nuevamente.</div>
+            </form>
+        </div>
+
+        <div id="secret-content">
+            <h2>Material del Curso</h2>
+            <p>Descarga los archivos exclusivos a continuación:</p>
+            
+            <a href="assets/manual-profesores.pdf" class="download-btn" download>
+                <i class="fa-solid fa-file-pdf fa-2x"></i>
+                <span>Manual de Formación de Profesores (PDF)</span>
+            </a>
+
+            <a href="assets/manual-profesores 2.docx" class="download-btn" download>
+                <i class="fa-solid fa-file-word fa-2x"></i>
+                <span>Manual de Formación de Profesores 2 (DOCX)</span>
+            </a>
+        </div>
+
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Volver a la página principal</a>
+    </div>
+
+    <script>
+        function checkPassword(event) {
+            event.preventDefault();
+            const input = document.getElementById('passwordInput').value;
+            const error = document.getElementById('errorMessage');
+            const loginForm = document.getElementById('login-form');
+            const secretContent = document.getElementById('secret-content');
+
+            // The password provided by the user
+            if (input === 'academiaprofesores2026') {
+                error.style.display = 'none';
+                loginForm.style.display = 'none';
+                secretContent.style.display = 'block';
+            } else {
+                error.style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
