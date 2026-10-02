@@ -283,15 +283,23 @@ header:not(.scrolled) .nav-link {
     display: inline-block;
     background-color: var(--primary-red);
     color: var(--white);
-    padding: 6px 16px;
+    padding: 8px 20px;
     border-radius: 30px;
     font-weight: 800;
     font-size: 0.85rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(217, 29, 42, 0.4);
     animation: pulse-badge 2s infinite;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.promo-badge:hover {
+    transform: scale(1.08);
+    background-color: var(--primary-red-hover);
 }
 
 @keyframes pulse-badge {
